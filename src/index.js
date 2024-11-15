@@ -11,9 +11,14 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
+app.use('/', (_, res) =>{
+    res.send('Welcome to my api');
+});
 
 
 registrateRouter(app);
+
+
 
 
 app.listen(PORT, ()=>{
